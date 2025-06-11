@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+    <string name="error_diskfull"></string>
+    <string name="error_unknown"></string>
+    <string name="error_timeout"></string>
+    <string name="error_nointernet"></string>
+    <string name="error_toomanyrequests"></string>
+    <string name="error_serializatioin"></string>
+</resources>
