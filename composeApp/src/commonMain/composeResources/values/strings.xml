@@ -7,4 +7,5 @@
     <string name="error_nointernet"></string>
     <string name="error_toomanyrequests"></string>
     <string name="error_serializatioin"></string>
+    <string name="favorites">favorites</string>
 </resources>

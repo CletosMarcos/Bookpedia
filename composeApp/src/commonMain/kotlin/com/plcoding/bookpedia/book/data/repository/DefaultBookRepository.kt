@@ -1,7 +1,7 @@
 package com.plcoding.bookpedia.book.data.repository
 
 import com.plcoding.bookpedia.book.data.network.RemoteBookDataSource
-import com.plcoding.bookpedia.book.data.toBook
+import com.plcoding.bookpedia.book.data.mappers.toBook
 import com.plcoding.bookpedia.book.domain.Book
 import com.plcoding.bookpedia.book.domain.BookRepository
 import com.plcoding.bookpedia.core.domain.DataError
@@ -17,5 +17,11 @@ class DefaultBookRepository(
             .map { dto ->
                 dto.results.map { it.toBook() }
             }
+    }
+
+    override suspend fun getBookDescription(bookId: String): Result<String?, DataError> {
+        return remoteBookDataSource
+            .getBookDetails(bookId)
+            .map { it.description }
     }
 }
